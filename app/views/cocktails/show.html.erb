@@ -1,5 +1,12 @@
 <h1><%=@cocktail.name%></h1>
 
+
+<%= image_tag @cocktail.picture.url(:medium) %>
+<br>
+<%= simple_form_for @cocktail, url: cocktail_path do |form| %>
+<%= form.input :picture, as: :file %>
+<% end %>
+
  <ul>
   <% @cocktail.doses.each do |dose|%>
     <li> <%= dose.description%>  de <%= dose.ingredient.name %> </li>

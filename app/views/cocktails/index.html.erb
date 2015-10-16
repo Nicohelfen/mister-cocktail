@@ -2,9 +2,13 @@
 
 <% @cocktails.each do |t| %>
 <ul>
-  <li><%= link_to t.name, cocktail_path(id: t.id) %></li>
+  <li><%= image_tag t.picture.url(:thumb) %> <%= link_to t.name, cocktail_path(id: t.id) %></li>
   <br>
 </ul>
 <%end%>
+
+
+
+
 
 <%= link_to "Add Cocktail", new_cocktail_path %>

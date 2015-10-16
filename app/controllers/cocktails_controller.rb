@@ -15,19 +15,21 @@ class CocktailsController < ApplicationController
   end
 
   def create
-    whitelist = params.require(:cocktail).permit(:name)
+    whitelist = params.require(:cocktail).permit(:name, :picture )
     @cocktail = Cocktail.new(whitelist)
 
     if @cocktail.save
       redirect_to cocktail_path(@cocktail)
+
     else
       render :new
     end
   end
 
   def destroy
-
   end
+
+
 
 private
   def set_cocktail

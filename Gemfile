@@ -29,6 +29,9 @@ gem 'font-awesome-sass', '~> 4.2.0'
 gem 'simple_form'
 gem "autoprefixer-rails"
 
+gem 'aws-sdk', '< 2.0'
+gem 'paperclip'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -38,7 +41,7 @@ gem "autoprefixer-rails"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'figaro'
+
 
 
 group :development, :test do

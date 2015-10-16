@@ -1,5 +1,7 @@
 <h1>Cocktail List</h1>
-
+<button type="button" class="btn btn-success"><%= link_to "Add Cocktail", new_cocktail_path %> </button>
+<br>
+<br>
 <% @cocktails.each do |t| %>
 <ul>
   <li><%= image_tag t.picture.url(:thumb) %> <%= link_to t.name, cocktail_path(id: t.id) %></li>
@@ -11,4 +13,3 @@
 
 
 
-<%= link_to "Add Cocktail", new_cocktail_path %>
